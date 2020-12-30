@@ -1,6 +1,5 @@
 import React from 'react'
 import MenuItem from './menu-item'
-import '../styles/style.scss'
 
 class DirectoryMenu extends React.Component {
   constructor() {

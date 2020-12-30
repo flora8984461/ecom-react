@@ -1,20 +1,19 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
-import '../styles/style.scss'
 
 const MenuItem = ({ title, imageUrl, size, linkUrl, history }) => (
-  <div 
-    className = {`${size} menu-item`}
-    onClick= {() => history.push(`${linkUrl}`) }
+  <div
+    className={`${size} menu-item`}
+    onClick={() => history.push(`${linkUrl}`)}
   >
-    <div className='background-image' style= {
+    <div className='background-image' style={
       {
-        backgroundImage:`url(${imageUrl})`
+        backgroundImage: `url(${imageUrl})`
       }
     } />
     <div className='content'>
       <h1 className='title'>
-          { title.toUpperCase() }
+        {title.toUpperCase()}
       </h1>
       <span className='subtitle'>SHOP NOW</span>
     </div>

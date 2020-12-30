@@ -9,7 +9,6 @@ import CartDropdown from './cart/cart-dropdown';
 import { selectCartHidden } from './redux/cart/cart-selector';
 import { selectCurrentUser } from './redux/user/user-selector';
 import SearchBar from './searchbar';
-import '../styles/style.scss';
 
 const Header = ({ currentUser, hidden, ...otherProps }) => {
   const path = otherProps.location.pathname;
@@ -23,7 +22,7 @@ const Header = ({ currentUser, hidden, ...otherProps }) => {
           {path === "/" && <SearchBar />}
           <CartIcon />
           {currentUser ? (
-            <div className='option' onClick={() => auth.signOut()}>
+            <div className='signout option' onClick={() => auth.signOut()}>
               Hello, { currentUser.userName},  SIGN OUT
             </div>
           ) : (

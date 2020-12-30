@@ -54,12 +54,10 @@ body {
 
   .logo-container {
     height: 100%;
-    width: 100%;
     padding: 20px;
   }
 
   .options {
-    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -75,10 +73,10 @@ body {
     a:hover {
       font-weight: bolder;
     }
-    div:hover {
-      font-weight: bolder;
-      cursor: pointer;
-    }
+  }
+  .signout:hover {
+    font-weight: bolder;
+    cursor: pointer;
   }
 }
 

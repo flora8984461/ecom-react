@@ -1,8 +1,8 @@
-import React from 'react'
-import HomePage from './pages/homepage'
-import CollectionPreviewShopPage from './pages/shoppage'
-import Header from './components/header'
-import SignInSignUpLayout from './pages/SignInSignUpLayout'
+import React from 'react';
+import HomePage from './pages/homepage';
+import CollectionPreviewShopPage from './pages/shoppage';
+import Header from './components/header';
+import SignInSignUpLayout from './pages/SignInSignUpLayout';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -10,7 +10,9 @@ import CheckoutPage from './pages/checkout';
 import { auth, createUserProfileDocument } from './utils/firebaseSetup';
 import { setCurrentUser } from './components/redux/user/user-actions';
 import { selectCurrentUser } from './components/redux/user/user-selector';
-import './App.css'
+import './App.css';
+import './styles/style.scss';
+import './styles/checkout.scss';
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -53,8 +55,8 @@ class App extends React.Component {
               this.props.currentUser ? (
                 <Redirect to='/' />
               ) : (
-                <SignInSignUpLayout />
-              )
+                  <SignInSignUpLayout />
+                )
             }
           />
         </Switch>
